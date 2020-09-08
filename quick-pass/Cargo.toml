@@ -1,0 +1,9 @@
+[package]
+name = "quick-pass"
+version = "0.1.0"
+authors = ["L4ngu0r <stew.roulleau@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.33.1"
+rust-argon2 = { version = "0.8", default-features = false }
