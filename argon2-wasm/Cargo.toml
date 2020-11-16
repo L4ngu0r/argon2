@@ -7,9 +7,12 @@ edition = "2018"
 [lib]
 crate-type = ["cdylib", "rlib"]
 
+[build-dependencies]
+dotenv = "0.15.0"
+
 [dependencies]
-wasm-bindgen = "0.2"
 rust-argon2 = { version = "0.8", default-features = false }
+wasm-bindgen = "0.2"
 
 [profile.release]
 lto = true
