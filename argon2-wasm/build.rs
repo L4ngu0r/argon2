@@ -1,7 +1,11 @@
 use dotenv::dotenv;
+use obfstr::hash;
 
 fn main() {
     dotenv().ok();
-    let argon_salt = dotenv::var("ARGON_SALT").unwrap();
-    println!("cargo:rustc-env=ARGON_SALT={}", argon_salt);
+
+    let salt: &str = &dotenv::var("ARGON_SALT").unwrap();
+    let hash = hash(&salt);
+
+    println!("cargo:rustc-env=ARGON_SALT={}", hash);
 }
