@@ -9,6 +9,7 @@ crate-type = ["cdylib", "rlib"]
 
 [build-dependencies]
 dotenv = "0.15.0"
+obfstr = "0.2.4"
 
 [dependencies]
 rust-argon2 = { version = "0.8", default-features = false }
